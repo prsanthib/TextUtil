@@ -79,7 +79,7 @@ export default function Textform(props) {
             <br/>
             <br/>
             <h2>Other Information</h2>
-            <p><b>{text.split(" ").filter((ele)=>{return ele.length!==0}).length} words {text.length} characters</b></p>
+            <p><b>{text.split(/\s+/).filter((ele)=>{return ele.length!==0}).length} words {text.length} characters</b></p>
             <p><b>takes {0.008*text.split(" ").filter((ele)=>{return ele.length!==0}).length} minutes to read</b></p>
             <h2>Preview</h2>
             <p>{text.length>0 ? text:"Nothing to preview!"}</p>
